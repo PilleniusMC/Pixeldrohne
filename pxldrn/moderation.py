@@ -146,4 +146,4 @@ class Admin:
         await ctx.send("Channel Perm: " + str(perms.value))
 
 def setup(bot: commands.Bot):
-        bot.add_cog(bot=bot)
+        bot.add_cog(Mods(bot=bot))
