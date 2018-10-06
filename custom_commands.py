@@ -30,3 +30,7 @@ class CustomCommands:
 
     # Alle Befehle hiernach hinzufügen
 
+
+def setup(bot: commands.Bot):
+    bot.add_cog(CustomCommands(bot=bot))
+    

@@ -144,3 +144,7 @@ class Admin:
         bot_mem = ctx.guild.get_member(self.bot.user.id)
         perms = discord.abc.GuildChannel.permissions_for(ctx.channel, bot_mem)
         await ctx.send("Channel Perm: " + str(perms.value))
+
+def setup(bot: commands.Bot):
+        bot.add_cog(Mods(bot=bot))
+        bot.add_cog(Admin(bot=bot))

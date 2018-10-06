@@ -52,3 +52,6 @@ class MainCommands:
         await db.release(con)
 
         await ctx.send(f"Neuer Eintrag in der Datenbank hinzugefügt:\nName: {name}, ID: {user_id}")
+                       
+def setup(bot: commands.Bot):
+    bot.add_cog(MainCommands(bot=bot))

@@ -393,3 +393,7 @@ class Voice:
             except Exception as error:
 
                 await ctx.send(f"Error: {error}")
+                
+def setup(bot: commands.Bot):
+    bot.add_cog(Voice(bot=bot))
+                
