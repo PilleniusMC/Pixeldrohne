@@ -206,11 +206,15 @@ async def uptime(ctx):
             tstring = f"{result.days} Tagen " + tstring
     await ctx.send(f"Der Bot läuft schon seit {tstring}")
 
-bot.add_cog(pxldrn.helps.Help(bot))
-bot.add_cog(pxldrn.music.Voice(bot))
-bot.add_cog(pxldrn.moderation.Mods(bot))
-bot.add_cog(pxldrn.moderation.Admin(bot))
-bot.add_cog(pxldrn.minigames.SchereSteinPapier(bot))
+cogs = [
+    'pxldrn.helps',
+    'pxldrn.music',
+    'pxldrn.moderation',
+    'pxldrn.minigames'
+]
+    
+for cog in cogs:
+    bot.load_extension(cog)
 bot.add_cog(CustomCommands(bot))
 bot.add_cog(MainCommands(bot))
 bot.run(keys.token)
