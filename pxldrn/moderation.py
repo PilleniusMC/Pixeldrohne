@@ -147,3 +147,4 @@ class Admin:
 
 def setup(bot: commands.Bot):
         bot.add_cog(Mods(bot=bot))
+        bot.add_cog(Admin(bot=bot))
