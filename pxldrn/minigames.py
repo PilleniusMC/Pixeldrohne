@@ -115,3 +115,7 @@ class SchereSteinPapier:
     async def extended_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Bitte wähle zwischen Schere, Stein, Papier, Echse oder Spock.")
+
+def setup(bot: commands.Bot):
+    bot.add_cog(SchereSteinPapier(bot=bot))
+            
