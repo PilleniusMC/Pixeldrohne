@@ -210,11 +210,11 @@ cogs = [
     'pxldrn.helps',
     'pxldrn.music',
     'pxldrn.moderation',
-    'pxldrn.minigames'
+    'pxldrn.minigames',
+    'custom_commands',
+    'databas_test'
 ]
     
 for cog in cogs:
     bot.load_extension(cog)
-bot.add_cog(CustomCommands(bot))
-bot.add_cog(MainCommands(bot))
 bot.run(keys.token)
