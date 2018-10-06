@@ -140,3 +140,7 @@ class Help:
         embed.add_field(name="English/International", value="https://pixeldrohne.mystic-alchemy.com/en-invite\n"
                                                             "Warning: this bot isn't yet online.")
         await ctx.channel.send(embed=embed)
+
+def setup(bot: commands.Bot):
+    bot.add_cog(Help(bot=bot))
+        
